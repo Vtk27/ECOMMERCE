@@ -135,17 +135,3 @@ cd ECOMMERCE
 5.  Open a Pull Request
 
 -----
-
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-```
-
-### What I improved:
-1.  **Status Badges:** Added visual tags for Java, React, etc., at the top.
-2.  **Clean Tables:** Used Markdown tables for the folder structure and troubleshooting section.
-3.  **Proper Code Blocks:** Applied correct syntax highlighting (e.g., `properties` for config, `bash` for commands).
-4.  **Checklist:** Used `[x]` for the features section to make it look like a task list.
-5.  **Visual Separation:** Added horizontal rules (`---`) to break up the "wall of text."
-```
