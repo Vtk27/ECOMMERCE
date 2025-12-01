@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  orderdb:
+    image: mysql
+    container_name: orderdb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: orderdb
+    ports:
+      - "3340:3306"
+    volumes:
+      - product_data:/var/lib/mysql
+
+volumes:
+  product_data:
