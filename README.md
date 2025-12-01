@@ -36,30 +36,28 @@ Before you begin, ensure you have the following installed on your machine:
 ```bash
 git clone [https://github.com/Vtk27/ECOMMERCE.git](https://github.com/Vtk27/ECOMMERCE.git)
 cd ECOMMERCE
-
+```
 2. Backend Setup
 
 Navigate to the backend directory and configure your database settings.
 
-    Navigate to the Backend:
-    Bash
-
+   i) Navigate to the Backend:
+```Bash
 cd Backend
+```
+   ii) Configure Database: Open src/main/resources/application.properties (or application.yml) and update your database credentials:
+       Properties
+    
+    spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db
+    spring.datasource.username=your_username
+    spring.datasource.password=your_password
+    spring.jpa.hibernate.ddl-auto=update
 
-Configure Database: Open src/main/resources/application.properties (or application.yml) and update your database credentials:
-Properties
-
-spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-
-Run the Application:
-Bash
-
+   iii) Run the Application:
+    Bash
+    
     mvn spring-boot:run
-
-    The backend server should start on port 8080 (default).
+   The backend server should start on port 8080 (default).
 
 3. Frontend Setup
 
@@ -81,18 +79,17 @@ Bash
     npm start
 
     The application should now be accessible at http://localhost:3000 (or the port specified).
-
 ✨ Features
 
-    User Authentication: Secure login and registration.
+User Authentication: Secure login and registration.
 
-    Product Catalog: Browse and search for products.
+Product Catalog: Browse and search for products.
 
-    Shopping Cart: Add, remove, and update items in the cart.
+Shopping Cart: Add, remove, and update items in the cart.
 
-    Order Management: Checkout and view order history.
+Order Management: Checkout and view order history.
 
-    Responsive Design: Optimized for both desktop and mobile devices
+Responsive Design: Optimized for both desktop and mobile devices
 
 🤝 Contributing
 
