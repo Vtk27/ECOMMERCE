@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  orderdb:
+    image: mysql
+    container_name: orderdb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: orderdb
+    ports:
+      - "3340:3306"
+    volumes:
+      - order_data:/var/lib/mysql
+  productdb:
+    image: mysql
+    container_name: productdb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: productdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+  userdb:
+    image: mysql
+    container_name: userdb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: userdb
+    ports:
+      - "3308:3306"
+    volumes:
+      - user-data:/var/lib/mysql
+  redis:
+    image: redis:alpine
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+volumes:
+  order_data:
+  mysql_data:
+  user-data:

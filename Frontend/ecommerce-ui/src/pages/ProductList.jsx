@@ -11,10 +11,12 @@ export default function ProductList() {
         const fetchProducts = async () => {
             try {
                 const jwt = localStorage.getItem("jwt");
+                const userId = localStorage.getItem("userId");
                 const res = await fetch("http://localhost:8080/products", {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${jwt}`,
+                        "X-User-Id": userId
                     },
                 });
 
